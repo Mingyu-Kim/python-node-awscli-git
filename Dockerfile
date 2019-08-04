@@ -1,5 +1,10 @@
 FROM node:8
 
+
+RUN \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+    apt-utils \
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -15,5 +20,5 @@ RUN \
 RUN python --version
 RUN pip --version
 RUN pip install setuptools
-RUN pip install awscli
-RUN pip install python-telegram-bot
+RUN pip install awscli --upgrade
+RUN pip install python-telegram-bot --upgrade
