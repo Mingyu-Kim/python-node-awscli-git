@@ -14,5 +14,6 @@ RUN \
 
 RUN python --version
 RUN pip --version
+RUN pip install setuptools
 RUN pip install awscli
 RUN pip install python-telegram-bot
