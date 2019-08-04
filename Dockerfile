@@ -8,8 +8,10 @@ RUN \
     python-dev \
     python-pip \
     python-yaml \
+    jq \
     && apt-get clean
 
 RUN python -v
-RUN pip -v
-RUN pip install awscli
+RUN pip --version
+RUN pip install awscli --upgrade
+RUN pip install python-telegram-bot --upgrade
